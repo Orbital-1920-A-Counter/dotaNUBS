@@ -44,6 +44,11 @@ Telegram Bot.
 * The user should be able to perform graphical queries from the web, and the web should
 displays some statistics, if any.
 
+We use React js as the front end, and Django as our backend. We have integrated the React with Django. We have managed to retrieve some seed of data stored in the database from the backend, and it will be shown by the frontend. Here is the following diagram:
+
+![Diagram](/images/diagram.jpg)
+One of the react component calls the backend to get some data that we want to display. Then, the backend retrieves the data from the database. This evidence is tested using some seeds in the database, and the front end enumerates everything inside the database as shown below:
+![Output](/images/output.jpg)
 
 Plan:
 

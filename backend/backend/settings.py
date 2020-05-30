@@ -25,7 +25,7 @@ SECRET_KEY = 'et!s*-se6)wfknb_28=c$iibsk$ged!o$&-m7)kwwbtoxk-#+y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dotanubsdjangoapp.herokuapp.com']
+ALLOWED_HOSTS = ['dotanubsdjangoapp.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -40,11 +40,11 @@ INSTALLED_APPS = [
     'heroes.apps.HeroesConfig',
     'rest_framework',
     'frontend',
-    'herokuapp',
 
 ]
 
 MIDDLEWARE = [
+
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -85,6 +85,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 
 
 # Password validation
@@ -132,7 +133,7 @@ STATICFILES_DIRS = (
 )
 
 #  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)
