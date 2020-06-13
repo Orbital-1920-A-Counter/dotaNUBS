@@ -1,8 +1,3 @@
-from .models import Hero
-from .serializers import HeroSerializer
-from rest_framework import generics
+from django.shortcuts import render
 
-
-class HeroListCreate(generics.ListCreateAPIView):
-    queryset = Hero.objects.all()
-    serializer_class = HeroSerializer
+# Create your views here.
