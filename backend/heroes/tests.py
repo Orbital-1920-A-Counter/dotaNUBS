@@ -22,10 +22,11 @@ class BaseViewTest(APITestCase):
 
 
 class GetAllHeroesTest(BaseViewTest):
-    response = self.client.get(
-        reverse("heroes-all", kwargs={"version": "v1"})
-    )
-    expected = Heroes.objects.all()
-    serialized = HeroesSerializer(expected, many = True)
-    self.assertEqual(response.data, serialized.data)
-    self.assertEqual(response.status_code, status.HTTP_200_OK)
+    def test_get_all_heroes(self):
+        response = self.client.get(
+            reverse("heroes-all", kwargs={"version": "v1"})
+        )
+        expected = Heroes.objects.all()
+        serialized = HeroesSerializer(expected, many = True)
+        self.assertEqual(response.data, serialized.data)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
