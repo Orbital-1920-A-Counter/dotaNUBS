@@ -7,7 +7,9 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Face';
 import { MenuItem } from '@material-ui/core';
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import HeroesList from "C:/Users/ASUS/Documents/orbital/dotaNUBS/dotaNUBS/frontend/src/pages/components/list-all-hero";
+import get_heroes from 'C:/Users/ASUS/Documents/orbital/dotaNUBS/dotaNUBS/frontend/src/services/get_data';
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
@@ -27,6 +29,7 @@ function Header() {
   const classes = useStyles();
 
   return (
+    <Router>
     <AppBar position='fixed' className={classes.appBar}>
       <Toolbar>
         <IconButton
@@ -54,16 +57,18 @@ function Header() {
         </MenuItem>
             <MenuItem>
           <Typography variant='h6' className={classes.title}>
-            Heroes
+            Players
           </Typography>
         </MenuItem>
             <MenuItem>
           <Typography variant='h6' className={classes.title}>
-            Players
+          Heroes
+
           </Typography>
         </MenuItem>
       </Toolbar>
     </AppBar>
+    </Router>
   );
 }
 

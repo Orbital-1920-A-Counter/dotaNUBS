@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Header from './components/header';
 import Body from './components/body';
-import Body2 from './components/body2';
 import Footer from './components/footer';
 import easy from './assets/easy.png';
 import free from './assets/free.png';
