@@ -5,8 +5,7 @@ import easy from './assets/easy.png';
 import free from './assets/free.png';
 import effective from './assets/effective.png';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import HeroesList from "C:/Users/ASUS/Documents/orbital/dotaNUBS/dotaNUBS/frontend/src/pages/components/list-all-hero";
-
+import HeroesList from 'calls/list-all-hero';
 import './App.css';
 
 

@@ -1,4 +1,4 @@
-import http from "../http-common";
+import http from "calls/http-common.js";
 
 class getData {
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import getData from "get_data";
+import getData from "calls/get_data.js";
 
 
 export default class HeroesList extends Component {

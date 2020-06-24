@@ -8,8 +8,6 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Face';
 import { MenuItem } from '@material-ui/core';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import HeroesList from "C:/Users/ASUS/Documents/orbital/dotaNUBS/dotaNUBS/frontend/src/pages/components/list-all-hero";
-import get_heroes from 'C:/Users/ASUS/Documents/orbital/dotaNUBS/dotaNUBS/frontend/src/services/get_data';
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
