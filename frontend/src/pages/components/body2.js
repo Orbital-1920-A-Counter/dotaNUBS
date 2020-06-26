@@ -1,14 +1,37 @@
-import React from 'react';
-import easy from './assets/easy.png';
-import free from './assets/free.png';
-import effective from './assets/effective.png';
-import './App.css';
+import React, { Component } from 'react'
+import { render } from 'react-dom'
+import './style.css'
 
-function Body2() {
-  
-  return (
-<p> a </p>
-  	);
+class App extends Component {
+  function constructor() {
+    super()
+  }
+  function componentWillMount() {
+    this.getData()
+  }
+
+  function getData() {
+    // create a new XMLHttpRequest
+    var xhr = new XMLHttpRequest()
+
+    // get a callback when the server responds
+    xhr.addEventListener('load', () => {
+      // update the state of the component with the result here
+      console.log(xhr.responseText)
+    })
+    // open the request with the verb and the url
+    xhr.open('GET', 'https://api.opendota.com/api/mars')
+    // send the request
+    xhr.send()
+  }
+
+  function render() {
+    return (
+      <div>
+        <p>Hello World</p>
+      </div>
+    )
+  }
 }
 
-export default Body2;
+export default getData;

@@ -4,6 +4,8 @@ import bg from './assets/bg.jpg';
 import easy from './assets/easy.png';
 import free from './assets/free.png';
 import effective from './assets/effective.png';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import HeroesList from 'calls/list-all-hero';
 import './App.css';
 
 
@@ -46,7 +48,8 @@ function Body() {
 
         Effective: Find what you want in less than a minute.</h2>
         </div>
-<p></p>
+<h1>              <Link to={"/list-all-hero"} className = "nav-link"> Heroes </Link>
+            <Route exact path="/list-all-hero" component={HeroesList} /></h1>
     </div>
 
     );
