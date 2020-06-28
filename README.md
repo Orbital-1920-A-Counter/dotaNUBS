@@ -70,13 +70,13 @@ Here is our frontpage design, with headers and footers:
 ![Frontpage](/images/frontpage1.jpg)
 
 And here is our function to list all DoTA2 Heroes:
-![Diagram](/images/heroes.jpg)
+![Heroes](/images/heroes.png)
 
 We can see a detailed info about one hero (Lina):
-![Diagram](/images/one_hero.jpg)
+![One_Hero](/images/one_hero.png)
 
 The profile page is shown below (Disclaimer: This ID is neither owned by the project maker):
-![Diagram](/images/profile.jpg)
+![Profile](/images/profile.png)
 Version Control:
 
 We use GitHub to do version control. Our github can be seen [here](https://github.com/Orbital-1920-A-Plus-Counter/dotaNUBS).
@@ -86,6 +86,10 @@ working on one thing simultaneously. A pull is checked by other member, and corr
 as possible to prevent lingering bugs. Both members work on seperate branches, which can be seen at the 
 end of this README file.
 
+To run this project, first you need to install npm. Then, clone this project in your local computer.
+After that, open command line in your OS and go to the frontend directory of the project. Finally, run 
+'npm install react-scripts' if you have not done so, and run 'npm start'. You will see the project on 
+localhost:3000.
 
 Plan:
 * 1st week of July : Implementation of peer team's suggestions.
