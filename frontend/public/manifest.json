@@ -1,21 +1,15 @@
 {
-  "short_name": "dotaNUBS",
-  "name": "dotaNUBS: Free DoTA2 Data Analyzer",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
-      "src": "C:/Users/ASUS/Documents/orbital/dotaNUBS/dotaNUB/main_page/pics/logo.jpg",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
-    },
-    {
-      "src": "C:/Users/ASUS/Documents/orbital/dotaNUBS/dotaNUB/main_page/pics/logo.jpg",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-
+    }
   ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#800000"// maroon 
+  "background_color": "#ffffff"
 }
