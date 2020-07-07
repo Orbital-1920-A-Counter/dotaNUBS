@@ -1,7 +1,6 @@
 from django.urls import path
-from . import views
-
+from .views import ListHeroesView
 
 urlpatterns = [
-    path('api/', views.HeroListCreate.as_view()),
+    path('', ListHeroesView.as_view(), name="heroes-all")
 ]

@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import Hero
+from .models import Heroes
 
 
-class HeroSerializer(serializers.ModelSerializer):
+class HeroesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Hero
-        fields = ('name', 'role', 'primary_attribute')
+        model = Heroes
+        fields = ("name", "primary_attr", "attack_type", "roles")
