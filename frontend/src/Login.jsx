@@ -19,9 +19,6 @@ const Login = ({ getGenericID }) => {
         >
           <Button bsStyle="success" bsSize="large" style={{marginTop: 30, marginBottom: 15, borderRadius: 5}} >Get your steam32 ID</Button>          
         </a>
-        <div>
-          <Button bsStyle="info" bsSize="large" onClick={getGenericID} style={{borderRadius: 5}} >I don't have Steam ID</Button>
-        </div>
       </div>
     </div>
 
