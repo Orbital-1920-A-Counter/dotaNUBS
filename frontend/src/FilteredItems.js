@@ -14,7 +14,7 @@ const FilteredItems = ( {item_id, items} ) => {
                 (mapItem, index) => {
                     return (
                         <div key={index}>
-                            <img src={`https://api.opendota.com${mapItem.img}`} alt='hero' style={{width: 100}} data-for='getContent' data-tip={mapItem.dname} />
+                            <img src={`https://api.opendota.com${mapItem.img}`} alt='hero' style={{width: 40}} data-for='getContent' data-tip={mapItem.dname} />
                             <ReactTooltip place="bottom" type="dark" effect="solid"
                                 id='getContent' 
                                 getContent={(dataTip) => <div>{dataTip}</div>}

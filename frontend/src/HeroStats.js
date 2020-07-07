@@ -16,7 +16,6 @@ class HeroStats extends React.Component {
 
 	componentDidMount() {
 		const heroid = this.props.match.params.heroid
-
 		fetch(`https://api.opendota.com/api/heroStats`)
 		.then(results => { return results.json() })
 		.then((data) => {

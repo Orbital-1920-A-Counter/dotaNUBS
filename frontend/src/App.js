@@ -5,6 +5,7 @@ import Header from './Header.js'
 import Heroes from './Heroes'
 import About from './About'
 import Pro from './Pro'
+import GameStats from './GameStats'
 import Footer from './Footer'
 import Login from './Login.jsx'
 import { Switch, Route } from 'react-router-dom'
@@ -27,7 +28,8 @@ class App extends Component {
       recentMatches: [],
       heroes: [],
       currentID: undefined,
-      heroid: 1
+      heroid: 1,
+      matchid:12345678
     }
   }
 
@@ -60,7 +62,7 @@ class App extends Component {
 
 
   render () {
-    const { isLoggedIn, account_id , heroid } = this.state
+    const { isLoggedIn, account_id , heroid, matchid } = this.state
     return (
       <div className='App'>
         <Header
@@ -88,6 +90,7 @@ class App extends Component {
                 isLoggedIn={isLoggedIn}
                 account_id={account_id}
                 heroid = {heroid}
+                matchid = {matchid}
                 players={this.state.players}
                 wl={this.state.wl}
                 recentMatches={this.state.recentMatches}
@@ -102,12 +105,15 @@ class App extends Component {
               <Heroes {...props} account_id={this.state.text} />
             )}
           />  
+
          <Route
             exact path='/pro'
             render={props => (<Pro {...props} account_id={this.state.text}  />) }
           />  
           <Route exact path='/about' render={props => (<About />)} />          
           <Route exact path='/heroes/:heroid' component={HeroStats}  render={props => (<HeroStats {...props} heroid={heroid}  />)}  />
+          <Route exact path='/games/:matchid' component={GameStats}  render={props => (<GameStats {...props} matchid={matchid}  />)}  />
+
         </Switch>
             <br/>
 
