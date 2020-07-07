@@ -28,6 +28,7 @@ class MatchHistory extends React.Component {
 
   componentDidMount() {
     const account_id = this.props.match.params.id
+
     fetch(`https://api.opendota.com/api/players/${account_id}`)
       .then(results => {
         return results.json()

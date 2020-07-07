@@ -21,7 +21,10 @@ const Header = ({ onChangeSearchText, text, onLogin }) => {
           <NavItem componentClass={Link} to={`/about`} href={`/about`}>About      
           </NavItem>
         </Nav>
-       
+        <Nav activeKey={3}>
+          <NavItem componentClass={Link} to={`/pro`} href={`/pro`}>Pro Players      
+          </NavItem>
+        </Nav>
         <Navbar.Form pullRight>
           <FormGroup>
             <FormControl type="text" placeholder="Search Steam32 ID" value={text} onChange={onChangeSearchText}/>
