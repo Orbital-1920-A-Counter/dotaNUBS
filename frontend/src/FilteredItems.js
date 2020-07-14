@@ -4,7 +4,7 @@ import ReactTooltip from 'react-tooltip'
 const FilteredItems = ( {item_id, items} ) => {
     const filterItem = items.filter(
         (filterItem) => {
-            return filterItem.id === item_id.item_id
+            return filterItem.id === item_id
         }    
     )
 
