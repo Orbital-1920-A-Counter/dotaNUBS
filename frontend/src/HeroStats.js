@@ -26,35 +26,35 @@ class HeroStats extends React.Component {
       fetch(`https://api.opendota.com/api/heroStats`)
       .then(results => { return results.json() })
       .then((data) => {
-         this.setState({
-            heroes: data,
-            heroData: data.filter(
-               (filtered => {
-                  return filtered.id === parseInt(this.props.match.params.heroid)
-              })
-               )
-        })
-     })
+       this.setState({
+        heroes: data,
+        heroData: data.filter(
+         (filtered => {
+          return filtered.id === parseInt(this.props.match.params.heroid)
+      })
+         )
+    })
+   })
 
       fetch(`https://api.opendota.com/api/heroes`)
       .then(results => { return results.json() })
       .then((data) => {
-         this.setState({
-            singleHeroData: data.filter(
-               (filtered => {
-                  return filtered.id === parseInt(this.props.match.params.heroid)
-              })
-               )
-        })
-     })
+       this.setState({
+        singleHeroData: data.filter(
+         (filtered => {
+          return filtered.id === parseInt(this.props.match.params.heroid)
+      })
+         )
+    })
+   })
 
       fetch(`https://api.opendota.com/api/heroes/${heroid}/matchups`)
       .then(results => { return results.json() })
       .then((data) => {
-         this.setState({
-            matchups: data
-        })
-     })
+       this.setState({
+        matchups: data
+    })
+   })
 
 
       fetch(`https://api.opendota.com/api/heroes/${heroid}/ItemPopularity`)
@@ -77,33 +77,33 @@ class HeroStats extends React.Component {
   heroRoles = (role) => {
       var roles = '';        
       for (var i = 0; i < role.length; i++) {
-         if (i === role.length-1) {                
-            roles = roles + role[i]
-        } else {
-            roles = roles + role[i] + ' - '
-        }
+       if (i === role.length-1) {                
+        roles = roles + role[i]
+    } else {
+        roles = roles + role[i] + ' - '
     }
-    return roles
+}
+return roles
 }
 
 heroPrimaryAttr = (attr) => {
   if (attr === 'str') {
-     return 'Strength'
- } else if (attr === 'agi') {
-     return 'Agillity'
- } else if (attr === 'int') {
-     return 'Intellect'
- }
+   return 'Strength'
+} else if (attr === 'agi') {
+   return 'Agillity'
+} else if (attr === 'int') {
+   return 'Intellect'
+}
 }
 
 
 render() {        
   return (
-     <div className='main-herostats'>                                                 
-     {this.state.heroData.map(                    
-        ((repo, index)=> {                            
-           return (
-              <div key={index}>
+   <div className='main-herostats'>                                                 
+   {this.state.heroData.map(                    
+    ((repo, index)=> {                            
+     return (
+      <div key={index}>
                                 <img src={`https://api.opendota.com${repo.img}`} alt='hero' style={{borderRadius: 5}}/>
                                 <div style={{fontSize: 48}}>{repo.localized_name}</div>
                                 <div>Primary Attribute:  {this.state.singleHeroData.map(rep => {return this.heroPrimaryAttr(rep.primary_attr)})}</div>
@@ -164,36 +164,36 @@ render() {
                                       <td>
                                       <div 
                                       style={{
-                                         color: repo.wins /(repo.games_played) *100 > 50 ? 'green' : 'red'}}
-                                         >
-                                         <p> {parseFloat(repo.wins/(repo.games_played)*100).toFixed(2)} </p> 
-                                         </div>                                	
-                                         </td>
-                                         </tbody>
-                                         )
+                                       color: repo.wins /(repo.games_played) *100 > 50 ? 'green' : 'red'}}
+                                       >
+                                       <p> {parseFloat(repo.wins/(repo.games_played)*100).toFixed(2)} </p> 
+                                       </div>                                	
+                                       </td>
+                                       </tbody>
+                                       )
 
-                                     }) }
-                                     </Table>                   
+                                   }) }
+                                   </Table>                   
 
 
 
-                                     </div>
-                                     )
-                                 })
-                                 )}
-                                 <div style={{fontSize: 18}}>Recommended Items</div>
-                                 <Table striped bordered condensed>
-                                 <thead>
-                                 <td> Before Game </td>
-                                 <td> Early Game </td>
-                                 <td> Mid Game </td>
-                                 <td> Late Game </td>
-                                 </thead>
-                                    <tbody>
-                                    <td>
-                                    <div align='center'>
-                                    <tr>
-                                    {Object.keys(this.state.startgameitems)[0] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.startgameitems)[0]]}_lg.png`} style={{width: 40,height:30}}/> : ""} 
+                                   </div>
+                                   )
+                               })
+                               )}
+                               <div style={{fontSize: 18}}>Recommended Items</div>
+                               <Table striped bordered condensed>
+                               <thead>
+                               <td> Before Game </td>
+                               <td> Early Game </td>
+                               <td> Mid Game </td>
+                               <td> Late Game </td>
+                               </thead>
+                               <tbody>
+                               <td>
+                               <div align='center'>
+                               <tr>
+                               {Object.keys(this.state.startgameitems)[0] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.startgameitems)[0]]}_lg.png`} style={{width: 40,height:30}}/>: ""} 
                                     {Object.keys(this.state.startgameitems)[1] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.startgameitems)[1]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.startgameitems)[2] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.startgameitems)[2]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.startgameitems)[3] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.startgameitems)[3]]}_lg.png`} style={{width: 40,height:30}}/>  : ""}                                  
@@ -204,13 +204,13 @@ render() {
                                     {Object.keys(this.state.startgameitems)[6] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.startgameitems)[6]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.startgameitems)[7] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.startgameitems)[7]]}_lg.png`} style={{width: 40,height:30}}/>  : ""}                                  
                                     </tr>
-                                     <tr>
+                                    <tr>
                                     {Object.keys(this.state.startgameitems)[8] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.startgameitems)[8]]}_lg.png`} style={{width: 40,height:30}}/> : ""} 
                                     {Object.keys(this.state.startgameitems)[9] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.startgameitems)[9]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.startgameitems)[10] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.startgameitems)[10]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.startgameitems)[11] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.startgameitems)[11]]}_lg.png`} style={{width: 40,height:30}}/>  : ""}                                  
                                     </tr>
-                                     <tr>
+                                    <tr>
                                     {Object.keys(this.state.startgameitems)[12] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.startgameitems)[12]]}_lg.png`} style={{width: 40,height:30}}/> : ""} 
                                     {Object.keys(this.state.startgameitems)[13] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.startgameitems)[13]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.startgameitems)[14] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.startgameitems)[14]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
@@ -226,7 +226,7 @@ render() {
 
                                     </td>
                                     <td>
-                                                                        <div align='center'>
+                                    <div align='center'>
 
                                     <tr>
                                     {Object.keys(this.state.earlygameitems)[0] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.earlygameitems)[0]]}_lg.png`} style={{width: 40,height:30}}/> : ""} 
@@ -240,13 +240,13 @@ render() {
                                     {Object.keys(this.state.earlygameitems)[6] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.earlygameitems)[6]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.earlygameitems)[7] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.earlygameitems)[7]]}_lg.png`} style={{width: 40,height:30}}/>  : ""}                                  
                                     </tr>
-                                     <tr>
+                                    <tr>
                                     {Object.keys(this.state.earlygameitems)[8] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.earlygameitems)[8]]}_lg.png`} style={{width: 40,height:30}}/> : ""} 
                                     {Object.keys(this.state.earlygameitems)[9] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.earlygameitems)[9]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.earlygameitems)[10] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.earlygameitems)[10]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.earlygameitems)[11] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.earlygameitems)[11]]}_lg.png`} style={{width: 40,height:30}}/>  : ""}                                  
                                     </tr>
-                                     <tr>
+                                    <tr>
                                     {Object.keys(this.state.earlygameitems)[12] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.earlygameitems)[12]]}_lg.png`} style={{width: 40,height:30}}/> : ""} 
                                     {Object.keys(this.state.earlygameitems)[13] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.earlygameitems)[13]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.earlygameitems)[14] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.earlygameitems)[14]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
@@ -261,7 +261,7 @@ render() {
                                     </div>
                                     </td>
                                     <td>
-                                                                        <div align='center'>
+                                    <div align='center'>
 
                                     <tr>
                                     {Object.keys(this.state.midgameitems)[0] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.midgameitems)[0]]}_lg.png`} style={{width: 40,height:30}}/> : ""} 
@@ -275,13 +275,13 @@ render() {
                                     {Object.keys(this.state.midgameitems)[6] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.midgameitems)[6]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.midgameitems)[7] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.midgameitems)[7]]}_lg.png`} style={{width: 40,height:30}}/>  : ""}                                  
                                     </tr>
-                                     <tr>
+                                    <tr>
                                     {Object.keys(this.state.midgameitems)[8] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.midgameitems)[8]]}_lg.png`} style={{width: 40,height:30}}/> : ""} 
                                     {Object.keys(this.state.midgameitems)[9] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.midgameitems)[9]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.midgameitems)[10] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.midgameitems)[10]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.midgameitems)[11] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.midgameitems)[11]]}_lg.png`} style={{width: 40,height:30}}/>  : ""}                                  
                                     </tr>
-                                     <tr>
+                                    <tr>
                                     {Object.keys(this.state.midgameitems)[12] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.midgameitems)[12]]}_lg.png`} style={{width: 40,height:30}}/> : ""} 
                                     {Object.keys(this.state.midgameitems)[13] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.midgameitems)[13]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.midgameitems)[14] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.midgameitems)[14]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
@@ -296,7 +296,7 @@ render() {
                                     </div>
                                     </td>
                                     <td>
-                                                                        <div align='center'>
+                                    <div align='center'>
 
                                     <tr>
                                     {Object.keys(this.state.lategameitems)[0] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.lategameitems)[0]]}_lg.png`} style={{width: 40,height:30}}/> : ""} 
@@ -310,13 +310,13 @@ render() {
                                     {Object.keys(this.state.lategameitems)[6] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.lategameitems)[6]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.lategameitems)[7] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.lategameitems)[7]]}_lg.png`} style={{width: 40,height:30}}/>  : ""}                                  
                                     </tr>
-                                     <tr>
+                                    <tr>
                                     {Object.keys(this.state.lategameitems)[8] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.lategameitems)[8]]}_lg.png`} style={{width: 40,height:30}}/> : ""} 
                                     {Object.keys(this.state.lategameitems)[9] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.lategameitems)[9]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.lategameitems)[10] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.lategameitems)[10]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.lategameitems)[11] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.lategameitems)[11]]}_lg.png`} style={{width: 40,height:30}}/>  : ""}                                  
                                     </tr>
-                                     <tr>
+                                    <tr>
                                     {Object.keys(this.state.lategameitems)[12] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.lategameitems)[12]]}_lg.png`} style={{width: 40,height:30}}/> : ""} 
                                     {Object.keys(this.state.lategameitems)[13] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.lategameitems)[13]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
                                     {Object.keys(this.state.lategameitems)[14] > "" ?<img src={`https://api.opendota.com/apps/dota2/images/items/${itemid[Object.keys(this.state.lategameitems)[14]]}_lg.png`} style={{width: 40,height:30}}/> : ""}
@@ -337,7 +337,7 @@ render() {
                                     </div>
 
                                     )
-                                }
-                            }
+}
+}
 
-                            export default HeroStats
+export default HeroStats
