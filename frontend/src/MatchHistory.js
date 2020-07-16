@@ -2,8 +2,11 @@ import React from 'react'
 import { Table } from 'react-bootstrap'
 import './App.css'
 import FilteredHeroes from './FilteredHeroes'
+import FilteredItems from './FilteredItems'
 import GameMode from './GameMode'
 import constantgamemode from '../src/constants/ConstantGameMode.json'
+import { Navbar, NavItem, Nav, Button, FormControl, FormGroup } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 class MatchHistory extends React.Component {
   constructor () {
@@ -85,6 +88,7 @@ class MatchHistory extends React.Component {
         
       })
 
+
     fetch(`https://api.opendota.com/api/heroStats`)
       .then(results => {
         return results.json()
@@ -94,6 +98,9 @@ class MatchHistory extends React.Component {
           heroes: data
         })
       })
+
+
+
   }
 
   getTime = (duration) => {
@@ -177,6 +184,7 @@ class MatchHistory extends React.Component {
               <th>KILL</th>
               <th>DEATHS</th>
               <th>ASSISTS</th>
+              <th></th>
             </tr>
           </thead>
           {this.state.recentMatches.map(repo => {
@@ -247,6 +255,9 @@ class MatchHistory extends React.Component {
                   </td>
                   <td>
                     <div>{repo.assists}</div>
+                  </td>
+                  <td>
+                     <Link to={`/games/${repo.match_id}`}><Button type="submit">DETAILS</Button></Link>
                   </td>
                 </tr>
               </tbody>
