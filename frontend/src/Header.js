@@ -25,6 +25,10 @@ const Header = ({ onChangeSearchText, text, onLogin }) => {
           <NavItem componentClass={Link} to={`/pro`} href={`/pro`}>Pro Players      
           </NavItem>
         </Nav>
+        <Nav activeKey={4}>
+          <NavItem componentClass={Link} to={`/items`} href={`/items`}>Items
+          </NavItem>
+        </Nav>
 
         <Navbar.Form pullRight>
           <FormGroup>
