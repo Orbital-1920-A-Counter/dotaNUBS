@@ -1,4 +1,5 @@
 {
+  "homepage": "orbital-1920-a-plus-counter.github.io/dotaNUBS",
   "name": "react-dota-app",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +13,8 @@
     "react-tooltip": "^3.9.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start", 
     "build": "react-scripts build",
     "test": "react-scripts test",
