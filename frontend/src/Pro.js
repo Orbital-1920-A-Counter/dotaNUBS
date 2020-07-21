@@ -22,29 +22,29 @@ class Pro extends React.Component {
     render () {
         return (
             <div className='main-heroes'>
-                <div style={{fontSize: 18, fontWeight: 'bold'}}>Pro Players</div>
-                <hr/>
-                <div className='heroes'>
-                    {this.state.pro.map((repo, index) => {
-                        return (
-                            <div key={index} className='hero-list' >
-                                <div>{repo.personaname}</div>
-                                <div>
-                                    <Link to={`/match/${repo.account_id}`}>
-                                        <img alt='Hero'  
-                                            src={`${repo.avatarmedium}`} 
-                                            style={{width: 150}}
-                                        />
-                                    </Link>                                    
-                                </div>
-                            </div>
-                        )
-                    })}
+            <div style={{fontSize: 18, fontWeight: 'bold'}}>Pro Players</div>
+            <hr/>
+            <div className='heroes'>
+            {this.state.pro.map((repo, index) => {
+                return (
+                    <div key={index} className='hero-list' >
+                    <div>{repo.personaname}</div>
+                    <div>
+                    <Link to={`/match/${repo.account_id}`}>
+                    <img alt='Hero'  
+                    src={`${repo.avatarmedium}`} 
+                    style={{width: 150}}
+                    />
+                    </Link>                                    
+                    </div>
+                    </div>
+                    )
+                })}
                 </div>
-            </div>
-        )
-    }
-    
-}
+                </div>
+                )
+            }
+            
+        }
 
-export default Pro
+        export default Pro

@@ -5,11 +5,14 @@ import Header from './Header.js'
 import Heroes from './Heroes'
 import About from './About'
 import Pro from './Pro'
+import GameStats from './GameStats'
 import Footer from './Footer'
 import Login from './Login.jsx'
 import { Switch, Route } from 'react-router-dom'
 import { withRouter } from 'react-router'
-import HeroStats from './HeroStats';
+import HeroStats from './HeroStats'
+import Items from './Items'
+import ItemStats from './ItemStats'
 
 class App extends Component {
   constructor (props) {
@@ -60,7 +63,7 @@ class App extends Component {
 
 
   render () {
-    const { isLoggedIn, account_id , heroid } = this.state
+    const { isLoggedIn, account_id , heroid, matchid ,itemid} = this.state
     return (
       <div className='App'>
         <Header
@@ -88,6 +91,8 @@ class App extends Component {
                 isLoggedIn={isLoggedIn}
                 account_id={account_id}
                 heroid = {heroid}
+                matchid = {matchid}
+                itemid = {itemid}
                 players={this.state.players}
                 wl={this.state.wl}
                 recentMatches={this.state.recentMatches}
@@ -102,12 +107,23 @@ class App extends Component {
               <Heroes {...props} account_id={this.state.text} />
             )}
           />  
+          <Route
+            exact path='/items'
+            render={props => (
+              <Items {...props}/>
+            )}
+          />  
+
          <Route
             exact path='/pro'
             render={props => (<Pro {...props} account_id={this.state.text}  />) }
           />  
           <Route exact path='/about' render={props => (<About />)} />          
           <Route exact path='/heroes/:heroid' component={HeroStats}  render={props => (<HeroStats {...props} heroid={heroid}  />)}  />
+          <Route exact path='/games/:matchid' component={GameStats}  render={props => (<GameStats {...props} matchid={matchid}  />)}  />
+          <Route exact path='/items/:itemid' component={ItemStats}  render={props => (<ItemStats {...props} itemid={itemid}  />)}  />
+
+
         </Switch>
             <br/>
 
