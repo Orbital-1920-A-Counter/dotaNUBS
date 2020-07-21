@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "f978ef0e49b927eda30e",
+    "revision": "3adae8cb539a87b85e3b",
     "url": "/dotaNUBS/static/css/main.906a3b0d.chunk.css"
   },
   {
-    "revision": "f978ef0e49b927eda30e",
-    "url": "/dotaNUBS/static/js/main.faae5438.chunk.js"
+    "revision": "3adae8cb539a87b85e3b",
+    "url": "/dotaNUBS/static/js/main.789f2b79.chunk.js"
   },
   {
     "revision": "480993ff76bce720e6a3",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/dotaNUBS/static/media/bg.3c2a6a59.jpg"
   },
   {
-    "revision": "930b2e6ff56c12069ab38860677f95c4",
+    "revision": "c858a0b13ef68c6df9acd8aa46c8ad7f",
     "url": "/dotaNUBS/index.html"
   }
 ];
