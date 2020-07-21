@@ -1,14 +1,14 @@
 {
-  "main.css": "/dotaNUBS/static/css/main.906a3b0d.chunk.css",
-  "main.js": "/dotaNUBS/static/js/main.4cc77071.chunk.js",
-  "main.js.map": "/dotaNUBS/static/js/main.4cc77071.chunk.js.map",
+  "main.css": "/dotaNUBS/static/css/main.243e307a.chunk.css",
+  "main.js": "/dotaNUBS/static/js/main.8163f1c8.chunk.js",
+  "main.js.map": "/dotaNUBS/static/js/main.8163f1c8.chunk.js.map",
   "runtime~main.js": "/dotaNUBS/static/js/runtime~main.a26ec5f6.js",
   "runtime~main.js.map": "/dotaNUBS/static/js/runtime~main.a26ec5f6.js.map",
-  "static/js/2.426aa5fe.chunk.js": "/dotaNUBS/static/js/2.426aa5fe.chunk.js",
-  "static/js/2.426aa5fe.chunk.js.map": "/dotaNUBS/static/js/2.426aa5fe.chunk.js.map",
+  "static/js/2.2207c82d.chunk.js": "/dotaNUBS/static/js/2.2207c82d.chunk.js",
+  "static/js/2.2207c82d.chunk.js.map": "/dotaNUBS/static/js/2.2207c82d.chunk.js.map",
   "index.html": "/dotaNUBS/index.html",
-  "precache-manifest.5af4b71fcb5b4e5d8d14c848757b2fb5.js": "/dotaNUBS/precache-manifest.5af4b71fcb5b4e5d8d14c848757b2fb5.js",
+  "precache-manifest.2f99c42a45207c6cd454d5520db6c0fe.js": "/dotaNUBS/precache-manifest.2f99c42a45207c6cd454d5520db6c0fe.js",
   "service-worker.js": "/dotaNUBS/service-worker.js",
-  "static/css/main.906a3b0d.chunk.css.map": "/dotaNUBS/static/css/main.906a3b0d.chunk.css.map",
-  "static/media/App.css": "/dotaNUBS/static/media/bg.3c2a6a59.jpg"
+  "static/css/main.243e307a.chunk.css.map": "/dotaNUBS/static/css/main.243e307a.chunk.css.map",
+  "static/media/App.css": "/dotaNUBS/static/media/bg2.06ae00ab.jpg"
 }
