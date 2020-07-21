@@ -13,6 +13,7 @@ import { withRouter } from 'react-router'
 import HeroStats from './HeroStats'
 import Items from './Items'
 import ItemStats from './ItemStats'
+import Tips from './Tips'
 
 class App extends Component {
   constructor (props) {
@@ -122,7 +123,8 @@ class App extends Component {
           <Route exact path='/heroes/:heroid' component={HeroStats}  render={props => (<HeroStats {...props} heroid={heroid}  />)}  />
           <Route exact path='/games/:matchid' component={GameStats}  render={props => (<GameStats {...props} matchid={matchid}  />)}  />
           <Route exact path='/items/:itemid' component={ItemStats}  render={props => (<ItemStats {...props} itemid={itemid}  />)}  />
-
+          <Route exact path='/Tips' render={props => (<Tips />)} />          
+ 
 
         </Switch>
             <br/>

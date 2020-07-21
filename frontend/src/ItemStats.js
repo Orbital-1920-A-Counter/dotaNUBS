@@ -45,7 +45,7 @@ class ItemStats extends React.Component {
         {this.state.smallnumbers.map((id) => {return( this.state.itemconstants[itemids[repo]].attrib[id] > "" ? "• " +(this.state.itemconstants[itemids[repo]].attrib[id].footer > "" ? (this.state.itemconstants[itemids[repo]].attrib[id].footer) : "")  + " " + (this.state.itemconstants[itemids[repo]].attrib[id].header) + " " + (this.state.itemconstants[itemids[repo]].attrib[id].value) + " " : "" )})}
         </tr>
         <tr>
-          Components : {this.state.smallnumbers.map((id) => {return( this.state.itemconstants[itemids[repo]].components > "" ? (this.state.itemconstants[itemids[repo]].components[id] > "" ? <img src={`https://api.opendota.com/apps/dota2/images/items/${this.state.itemconstants[itemids[repo]].components[id]}_lg.png`} alt='item' style={{borderRadius: 5}}/>  : "None" ) : (id < 1 ? "None" : "") )})}
+          Components : {this.state.smallnumbers.map((id) => {return( this.state.itemconstants[itemids[repo]].components > "" ? (this.state.itemconstants[itemids[repo]].components[id] > "" ? <img src={`https://api.opendota.com/apps/dota2/images/items/${this.state.itemconstants[itemids[repo]].components[id]}_lg.png`} alt='item' style={{borderRadius: 5}}/>  : "" ) : (id < 1 ? "None" : "") )})}
         </tr>
 
         </tbody>
