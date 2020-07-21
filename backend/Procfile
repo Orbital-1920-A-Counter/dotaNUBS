@@ -1,1 +1,0 @@
-web: gunicorn dotaNUBS.wsgi --log-file -
