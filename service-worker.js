@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "orbital-1920-a-plus-counter.github.io/dotaNUBS/precache-manifest.68b4897cadb86c35acce6ccdc7004f1a.js"
+  "orbital-1920-a-plus-counter.github.io/dotaNUBS/precache-manifest.ba63e363ddfa6231f666646990bd2dfa.js"
 );
 
 workbox.clientsClaim();
