@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "orbital-1920-a-plus-counter.github.io/dotaNUBS/precache-manifest.ba63e363ddfa6231f666646990bd2dfa.js"
+  "/dotaNUBS/precache-manifest.e90f73b8681e76c296e6b2f676952f81.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("orbital-1920-a-plus-counter.github.io/dotaNUBS/index.html", {
+workbox.routing.registerNavigationRoute("/dotaNUBS/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

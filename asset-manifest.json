@@ -1,14 +1,14 @@
 {
-  "main.css": "orbital-1920-a-plus-counter.github.io/dotaNUBS/static/css/main.5be55d23.chunk.css",
-  "main.js": "orbital-1920-a-plus-counter.github.io/dotaNUBS/static/js/main.0751deb4.chunk.js",
-  "main.js.map": "orbital-1920-a-plus-counter.github.io/dotaNUBS/static/js/main.0751deb4.chunk.js.map",
-  "runtime~main.js": "orbital-1920-a-plus-counter.github.io/dotaNUBS/static/js/runtime~main.ae957f82.js",
-  "runtime~main.js.map": "orbital-1920-a-plus-counter.github.io/dotaNUBS/static/js/runtime~main.ae957f82.js.map",
-  "static/js/2.426aa5fe.chunk.js": "orbital-1920-a-plus-counter.github.io/dotaNUBS/static/js/2.426aa5fe.chunk.js",
-  "static/js/2.426aa5fe.chunk.js.map": "orbital-1920-a-plus-counter.github.io/dotaNUBS/static/js/2.426aa5fe.chunk.js.map",
-  "index.html": "orbital-1920-a-plus-counter.github.io/dotaNUBS/index.html",
-  "precache-manifest.ba63e363ddfa6231f666646990bd2dfa.js": "orbital-1920-a-plus-counter.github.io/dotaNUBS/precache-manifest.ba63e363ddfa6231f666646990bd2dfa.js",
-  "service-worker.js": "orbital-1920-a-plus-counter.github.io/dotaNUBS/service-worker.js",
-  "static/css/main.5be55d23.chunk.css.map": "orbital-1920-a-plus-counter.github.io/dotaNUBS/static/css/main.5be55d23.chunk.css.map",
-  "static/media/App.css": "orbital-1920-a-plus-counter.github.io/dotaNUBS/static/media/bg.3c2a6a59.jpg"
+  "main.css": "/dotaNUBS/static/css/main.906a3b0d.chunk.css",
+  "main.js": "/dotaNUBS/static/js/main.789f2b79.chunk.js",
+  "main.js.map": "/dotaNUBS/static/js/main.789f2b79.chunk.js.map",
+  "runtime~main.js": "/dotaNUBS/static/js/runtime~main.a26ec5f6.js",
+  "runtime~main.js.map": "/dotaNUBS/static/js/runtime~main.a26ec5f6.js.map",
+  "static/js/2.426aa5fe.chunk.js": "/dotaNUBS/static/js/2.426aa5fe.chunk.js",
+  "static/js/2.426aa5fe.chunk.js.map": "/dotaNUBS/static/js/2.426aa5fe.chunk.js.map",
+  "index.html": "/dotaNUBS/index.html",
+  "precache-manifest.e90f73b8681e76c296e6b2f676952f81.js": "/dotaNUBS/precache-manifest.e90f73b8681e76c296e6b2f676952f81.js",
+  "service-worker.js": "/dotaNUBS/service-worker.js",
+  "static/css/main.906a3b0d.chunk.css.map": "/dotaNUBS/static/css/main.906a3b0d.chunk.css.map",
+  "static/media/App.css": "/dotaNUBS/static/media/bg.3c2a6a59.jpg"
 }
